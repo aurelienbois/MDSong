@@ -1,39 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import SongsContext from '../providers/SongsContext'
 
 function SongPlayer() {
-    const {currentSong, play, setPlay, pauseOrPlay, goForward, goBackward} = useContext(SongsContext)
+    const {currentSong, play, pauseOrPlay, goForward, goBackward} = useContext(SongsContext)
     const [full, setFull] = useState(false)
-
-    const audio = document.querySelector('audio')
-
-    useEffect(()=>{
-        audio.addEventListener("timeupdate", timeupdate);
-        //la fonction timeupdate est en dessous
-    },[setPlay])
-
-    const timeupdate = () =>{
-        
-        var currentTime = audio.currentTime; // Temps actuel en secondes
-        var duration = audio.duration; // Durée totale de la piste en secondes
-        
-        if (document.querySelector('.barre-small')) {
-            document.querySelector('.barre-small').style.width = `${(currentTime / duration) * 100}%`
-        }
-
-        if (document.querySelector('.barre-full')) {
-            document.querySelector('.barre-full').style.width = `${(currentTime / duration) * 100}%`
-            
-        }
-    }
 
     //fonction pour mettre le lecteur en fullScreen
     const fullSize = (e) =>{
         if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'I') {
             setFull(true)
-            setTimeout(() => {
-                timeupdate()
-            }, 1);
         }
 
     }
@@ -41,9 +16,6 @@ function SongPlayer() {
     //fonction pour minifier le lecteur
     const minSize = () =>{
         setFull(false)
-        setTimeout(() => {
-            timeupdate()
-        }, 1);
     }
 
   return (
@@ -64,7 +36,6 @@ function SongPlayer() {
                         :<i className="fa-solid fa-play"></i>
                     }
                 </button>
-                <div className='barre-small'></div>
             </div>
             :
             //Quand le player est en fullsize
@@ -92,9 +63,6 @@ function SongPlayer() {
                         </div>
                     </div>
                     <div className='mb-5'>
-                        <div className='barre-full-container mt-4 mb-4'>
-                            <div className='barre-full'></div>
-                        </div>
                         <div className='buttons-player-full'>
                             <button className='btn border-0'><i class="fa-solid fa-shuffle"></i></button>
                             <button className='btn border-0' onClick={goBackward}><i class="fa-solid fa-backward-step display-5"></i></button>
