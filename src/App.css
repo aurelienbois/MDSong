@@ -1,39 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
-*{
-  padding: 0 !important;
-  margin: 0 !important;
-  color: white;
-  font-family: 'Tilt Neon', sans-serif;
-  image-rendering: crisp-edges;
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    color: white;
+    font-family: 'Tilt Neon', sans-serif;
+    image-rendering: crisp-edges;
 }
 
-.App{
-  width: 100vw;
-  height: 100vh;
-  background-color: #a0bcec;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: #a0bcec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main{
-  background-color: #525E75;
-  height: 90%;
-  width: 420px;
-  background-image: radial-gradient(circle at 10% 8%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 87% 45%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 9% 67%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 31% 83%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 46% 54%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 16% 24%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 18% 9%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 85% 69%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 55% 7%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 69% 69%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 68% 60%, rgba(255,255,255, 0.03) 0%, rgba(255,255,255, 0.03) 4%,transparent 4%, transparent 96%),linear-gradient(354deg, rgb(16,16,38),rgb(45,49,81));
-  
+.main {
+    background-color: #525E75;
+    height: 90%;
+    width: 420px;
+    background-image: radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 87% 45%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 9% 67%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 31% 83%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 46% 54%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 16% 24%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 18% 9%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 85% 69%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 55% 7%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 69% 69%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 68% 60%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), linear-gradient(354deg, rgb(16, 16, 38), rgb(45, 49, 81));
+
 }
 
-.home{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.top-section{
+.top-section {
     width: 100%;
     height: 33%;
     background-image: url('images/neon_bleu.JPG');
@@ -47,88 +47,208 @@
     justify-content: flex-end;
 }
 
-.top-section h1{
+.top-section h1 {
     font-size: 1.8rem;
     font-weight: bold;
 }
-.top-section p{
+
+.top-section p {
     color: rgb(180, 180, 180);
 }
 
-.bottom-section{
+.bottom-section {
     width: 100%;
     height: 65%;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    
-  }
-  
-  .bottom-section::-webkit-scrollbar {
-    width: 2px; /* width of the entire scrollbar */
-  }
-  
-  .bottom-section::-webkit-scrollbar-track {
-    background: transparent; /* color of the tracking area */
-  }
-  
-  .bottom-section::-webkit-scrollbar-thumb {
-    border-radius: 25px;
-    border: 2px solid gray; /* creates padding around scroll thumb */
-  }
 
-.shuffle{
+}
+
+.bottom-section::-webkit-scrollbar {
+    width: 2px;
+    /* width of the entire scrollbar */
+}
+
+.bottom-section::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
+
+.bottom-section::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    border: 2px solid gray;
+    /* creates padding around scroll thumb */
+}
+
+.shuffle {
     background-color: rgba(138, 138, 138, 0.212);
     border: 0;
     font-size: 1rem;
     width: fit-content;
-  }
-  
-  .liste-music{
+}
+
+.liste-music {
     width: 100%;
     height: max-content;
-    
-  }
-  
-  .one-music{
+
+}
+
+.one-music {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  .one-music i,.one-music h4{
+}
+
+.one-music i,
+.one-music h4 {
     transition: color 0.2s ease;
-  }
-  
-  .one-music:hover i,.one-music:hover h4{
+}
+
+.one-music:hover i,
+.one-music:hover h4 {
     color: rgb(148, 148, 148);
-  }
-  
-  
-  .one-music img{
+}
+
+
+.one-music img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 10px;
-  }
-  
-  .one-music h4{
+}
+
+.one-music h4 {
     font-size: 1.1rem;
     font-weight: bold;
-    
-  }
-  
-  .one-music h6{
+
+}
+
+.one-music h6 {
     color: #ffffff9c;
     font-size: 0.9rem;
-  }
+}
 
+.song-player {
+    height: 60px;
+    background-color: rgb(104, 104, 104);
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 10px;
+
+    transition: all 0.3s ease;
+
+}
+
+.song-player .contain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.song-player .contain img {
+    width: 40px;
+    height: 40px;
+}
+
+.song-player .contain h4 {
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.song-player .contain h6 {
+    font-size: .85rem;
+    color: #ffffff9c;
+}
+
+.barre-small {
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    border-radius: 15px;
+    transition: width 0.2s ease;
+}
+
+
+.full {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100% !important;
+
+}
+
+.contain-full {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.body h6 {
+    color: rgb(211, 211, 211);
+}
+
+.body .fa-circle-check {
+    font-size: 1.3rem;
+    color: rgb(102, 211, 102);
+}
+
+.body img {
+    object-fit: cover;
+}
+
+.barre-full-container {
+    width: 100%;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #949494;
+}
+
+.barre-full {
+    width: 0%;
+    height: 4px;
+    background-color: white;
+    border-radius: 15px;
+    transition: width 0.2s ease;
+}
+
+.buttons-player-full {
+    /* background-color: #333333; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.buttons-player-full button:nth-child(3) {
+    width: 50px;
+
+}
 
 
 @media (max-device-width: 480px) {
     /* Styles pour les appareils ayant une largeur d'écran maximale de 414 pixels (par exemple, iPhone 11) */
 
-    .main{
+    .main {
         width: 100vw;
         height: 100vh;
 
