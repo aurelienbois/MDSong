@@ -11,7 +11,7 @@
 .App{
   width: 100vw;
   height: 100vh;
-  background-color: #333333;
+  background-color: #a0bcec;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,75 @@
 .top-section p{
     color: rgb(180, 180, 180);
 }
+
+.bottom-section{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    
+  }
+  
+  .bottom-section::-webkit-scrollbar {
+    width: 2px; /* width of the entire scrollbar */
+  }
+  
+  .bottom-section::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+  }
+  
+  .bottom-section::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    border: 2px solid gray; /* creates padding around scroll thumb */
+  }
+
+.shuffle{
+    background-color: rgba(138, 138, 138, 0.212);
+    border: 0;
+    font-size: 1rem;
+    width: fit-content;
+  }
+  
+  .liste-music{
+    width: 100%;
+    height: max-content;
+    
+  }
+  
+  .one-music{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .one-music i,.one-music h4{
+    transition: color 0.2s ease;
+  }
+  
+  .one-music:hover i,.one-music:hover h4{
+    color: rgb(148, 148, 148);
+  }
+  
+  
+  .one-music img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .one-music h4{
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+  }
+  
+  .one-music h6{
+    color: #ffffff9c;
+    font-size: 0.9rem;
+  }
+
 
 
 @media (max-device-width: 480px) {
