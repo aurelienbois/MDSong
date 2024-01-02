@@ -9,7 +9,7 @@ function SongContextProvider({children}) {
     useEffect(()=>{
         setSongs(sons)
         console.log(songs);
-    },[])
+    },[songs])
 
 
   return (
