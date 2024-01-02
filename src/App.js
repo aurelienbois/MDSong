@@ -1,10 +1,13 @@
 import './App.css';
+import SongContextProvider from './providers/SongContextProvider';
 
 function App() {
   return (
-    <div className="App">
+    <SongContextProvider>
+      <div className="App">
       
-    </div>
+      </div>
+    </SongContextProvider>
   );
 }
 
