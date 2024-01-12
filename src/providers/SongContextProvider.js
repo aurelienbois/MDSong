@@ -19,6 +19,7 @@ function SongContextProvider({children}) {
 
     const pauseOrPlay = () =>{
         const audio = document.querySelector('audio')
+        //Modification de la fonction pauseOrplay
 
         
         if (play) {
