@@ -12,7 +12,7 @@ function Homepage() {
     <div className='home position-relative'>
         <section className='top-section p-3'>
             <h1 className='m-0'>MDS B2 2023-2024</h1>
-            <p className='m-0 '>My playlist &nbsp;&nbsp;¤&nbsp;&nbsp; 240 songs &nbsp;&nbsp;¤&nbsp;&nbsp; 32 hours </p>
+            <p className='m-0 '>Ma playlist &nbsp;&nbsp;¤&nbsp;&nbsp; 12 sons &nbsp;&nbsp;¤&nbsp;&nbsp; 1 heure </p>
         </section>
         <section className='bottom-section p-3 pt-4'>
             <button className='shuffle rounded shadow p-2'><i class="fa-solid fa-shuffle"></i>&nbsp;&nbsp; Aléatoire</button>
