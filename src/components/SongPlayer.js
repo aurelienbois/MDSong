@@ -1,6 +1,8 @@
 // Import des dépendances nécessaires depuis React et le contexte des chansons
 import React, { useContext, useState, useRef } from 'react';
 import SongsContext from '../providers/SongsContext'; // Contexte global pour les données des chansons
+import ServerAddressContext from '../providers/ServerAddressContext';
+
 
 // Définition du composant SongPlayer
 function SongPlayer() {
@@ -31,6 +33,8 @@ function SongPlayer() {
         }
     };
 
+    const { serverAddress } = useContext(ServerAddressContext);
+
     // Rendu du composant
     return (
         <div className={'song-player rounded shadow p-2 ' + (full ? 'full' : '')} onClick={(e) => fullSize(e)}>
@@ -39,7 +43,7 @@ function SongPlayer() {
                     // Quand le lecteur est en mode minsize
                     <div className='contain'>
                         {/* Pochette, titre, artiste et bouton de lecture/pause */}
-                        <img className='' alt='music' src={`http://localhost:3001/songs/${currentSong?.cover}`}></img>
+                        <img className='' alt='music' src={serverAddress + currentSong?.cover}></img>
                         <div>
                             <h4 className=''>{currentSong.title}</h4>
                             <h6 className=''>{currentSong.artist}</h6>
@@ -69,7 +73,7 @@ function SongPlayer() {
                         {/* Corps du lecteur en mode plein écran avec pochette, boutons de contrôle, etc. */}
                         <div className='body'>
                             <div>
-                                <img className='rounded w-100 mb-4' alt='music' src={`http://localhost:3001/songs/${currentSong?.cover}`}></img>
+                                <img className='rounded w-100 mb-4' alt='music' src={serverAddress + currentSong?.cover}></img>
                                 <div className='d-flex justify-content-between align-items-center'>
                                     <div>
                                         <h4 className='fw-bold'>{currentSong.title}</h4>

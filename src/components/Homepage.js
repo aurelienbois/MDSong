@@ -3,6 +3,8 @@ import React, { useContext, useEffect } from 'react';
 import OneSong from './OneSong'; // Composant représentant une chanson individuelle
 import SongsContext from '../providers/SongsContext'; // Contexte global pour les données des chansons
 import SongPlayer from './SongPlayer'; // Composant du lecteur audio
+// récupérer l'adresse du serveur depuis le contexte
+import ServerAddressContext from '../providers/ServerAddressContext';
 
 // Définition du composant Homepage
 function Homepage() {
@@ -15,6 +17,9 @@ function Homepage() {
             console.log(songs);
         }
     }, [songs]);
+
+    const { serverAddress } = useContext(ServerAddressContext);
+
 
     // Rendu du composant
     return (
@@ -39,7 +44,7 @@ function Homepage() {
             </section>
 
             {/* Lecteur audio caché avec la source de la chanson actuelle */}
-            <audio className='d-none' src={"http://localhost:3001/songs/" + currentSong?.song} controls autoPlay />
+            <audio className='d-none' src={serverAddress + currentSong?.song} controls autoPlay />
 
             {/* Affichage du lecteur audio seulement si une chanson est sélectionnée */}
             {Object.keys(currentSong).length !== 0 && <SongPlayer></SongPlayer>}

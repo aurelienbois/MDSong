@@ -1,6 +1,8 @@
 // Import des dépendances nécessaires depuis React et le contexte des chansons
 import React, { useContext, useEffect } from 'react';
 import SongsContext from '../providers/SongsContext'; // Contexte global pour les données des chansons
+import ServerAddressContext from '../providers/ServerAddressContext';
+
 
 // Définition du composant OneSong
 function OneSong(song) {
@@ -12,12 +14,14 @@ function OneSong(song) {
         console.log(currentSong);
     });
 
+    const { serverAddress } = useContext(ServerAddressContext);
+
     // Rendu du composant
     return (
         // Div représentant une chanson individuelle, avec gestion du clic pour changer la chanson actuelle
         <div className='one-music py-3 gap-4' onClick={() => { changeCurrentSong(song.song); setPlay(true) }}>
             {/* Image de la pochette de la chanson */}
-            <img className='' alt='music' src={"http://localhost:3001/songs/" + song.song.cover}></img>
+            <img className='' alt='music' src={serverAddress + song.song.cover}></img>
 
             {/* Informations sur la chanson (titre et artiste) */}
             <div>
