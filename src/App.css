@@ -36,7 +36,7 @@
 .top-section {
     width: 100%;
     height: 33%;
-    background-image: url('images/neon_bleu.JPG');
+    background-image: url('images/banner.png');
     background-size: cover;
     background-position: center top;
     border-bottom-left-radius: 25px;
@@ -53,7 +53,7 @@
 }
 
 .top-section p {
-    color: rgb(180, 180, 180);
+    color: #1c1e38;
 }
 
 .bottom-section {
@@ -131,7 +131,7 @@
 
 .song-player {
     height: 60px;
-    background-color: rgb(104, 104, 104);
+    background-color: #292c53;
     position: absolute;
     bottom: 5px;
     left: 10px;
