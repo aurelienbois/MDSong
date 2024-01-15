@@ -48,16 +48,16 @@ const sons = [
         artist: "Marius"
     },
     {
-        song: "sanson/sanson_song.mp3",
-        cover: "sanson/sanson_cover.jpeg",
+        song: "samson/sanson_song.mp3",
+        cover: "samson/sanson_cover.jpeg",
         title: "Si j'avais su",
-        artist: "Sanson"
+        artist: "Samson"
     },
     {
-        song: "thoma/thoma_song.mp3",
-        cover: "thoma/thoma_cover.jpeg",
+        song: "thomas/thoma_song.mp3",
+        cover: "thomas/thoma_cover.jpeg",
         title: "Bécane",
-        artist: "Thoma"
+        artist: "Thomas"
     },
     {
         song: "thoma_c/thomas_c_song.mp3",
