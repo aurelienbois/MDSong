@@ -1,10 +1,13 @@
+// Import des dépendances nécessaires depuis React et le contexte des chansons
 import React, { useContext, useState, useRef } from 'react';
-import SongsContext from '../providers/SongsContext';
+import SongsContext from '../providers/SongsContext'; // Contexte global pour les données des chansons
 
+// Définition du composant SongPlayer
 function SongPlayer() {
+    // Utilisation du contexte pour accéder aux fonctions et données liées aux chansons
     const { currentSong, play, pauseOrPlay, goForward, goBackward } = useContext(SongsContext);
-    const [full, setFull] = useState(false);
-    const audioRef = useRef(null);
+    const [full, setFull] = useState(false); // État pour gérer le mode plein écran
+    const audioRef = useRef(null); // Référence au lecteur audio
 
     // Fonction pour mettre le lecteur en plein écran
     const fullSize = (e) => {
@@ -28,12 +31,14 @@ function SongPlayer() {
         }
     };
 
+    // Rendu du composant
     return (
         <div className={'song-player rounded shadow p-2 ' + (full ? 'full' : '')} onClick={(e) => fullSize(e)}>
             {
                 !full ?
                     // Quand le lecteur est en mode minsize
                     <div className='contain'>
+                        {/* Pochette, titre, artiste et bouton de lecture/pause */}
                         <img className='' alt='music' src={`${process.env.PUBLIC_URL}/dossiers_chansons/${currentSong?.cover}`}></img>
                         <div>
                             <h4 className=''>{currentSong.title}</h4>
@@ -50,17 +55,18 @@ function SongPlayer() {
                     :
                     // Quand le lecteur est en mode fullsize
                     <div className='p-2 contain-full'>
+                        {/* En-tête avec boutons pour minimiser et autres options */}
                         <div className='head d-flex align-items-center justify-content-between mb-3'>
                             <button className='btn border-0 p-3' onClick={() => minSize()}>
                                 <i class="fa-solid fa-angle-down"></i>
                             </button>
-
                             <h6 className='fw-bold'>MDS B2</h6>
-
                             <button className='btn border-0 p-3'>
                                 <i class="fa-solid fa-ellipsis"></i>
                             </button>
                         </div>
+
+                        {/* Corps du lecteur en mode plein écran avec pochette, boutons de contrôle, etc. */}
                         <div className='body'>
                             <div>
                                 <img className='rounded w-100 mb-4' alt='music' src={`${process.env.PUBLIC_URL}/dossiers_chansons/${currentSong?.cover}`}></img>
@@ -73,6 +79,7 @@ function SongPlayer() {
                                 </div>
                             </div>
                             <div className='mb-5'>
+                                {/* Boutons de contrôle du lecteur en mode plein écran */}
                                 <div className='buttons-player-full'>
                                     <button className='btn border-0'><i class="fa-solid fa-shuffle"></i></button>
                                     <button className='btn border-0' onClick={() => goBackward()}><i class="fa-solid fa-backward-step display-5"></i></button>
@@ -94,4 +101,5 @@ function SongPlayer() {
     );
 }
 
+// Export du composant SongPlayer
 export default SongPlayer;

@@ -1,5 +1,7 @@
+// Import de la fonction createContext depuis React
 import { createContext } from "react";
 
-const SongsContext = createContext(null)
+// Création et export du contexte SongsContext initialisé à null
+const SongsContext = createContext(null);
 
-export default SongsContext
+export default SongsContext;
