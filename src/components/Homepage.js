@@ -5,9 +5,12 @@ import SongPlayer from './SongPlayer'
 
 function Homepage() {
     const {songs, currentSong} = useContext(SongsContext)
-    useEffect(()=>{
-        console.log(songs);
-    })
+    // Commit message : Améliorer useEffect pour éviter un console.log inutile
+    useEffect(() => {
+      if (songs) {
+          console.log(songs);
+      }
+  }, [songs]);
   return (
     <div className='home position-relative'>
       <section className='top-section p-3'>
