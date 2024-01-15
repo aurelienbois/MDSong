@@ -14,8 +14,8 @@ function Homepage() {
   return (
     <div className='home position-relative'>
       <section className='top-section p-3'>
-            <h1 className='m-0'>MDS B2 2023-2024</h1>
-            <p className='m-0 '>Ma playlist &nbsp;&nbsp;¤&nbsp;&nbsp; 12 sons &nbsp;&nbsp;¤&nbsp;&nbsp; 1 heure </p>
+            <h1 className='m-0'>La classe B2</h1>
+            <p className='m-0 '>Ajout récent &nbsp;&nbsp;¤&nbsp;&nbsp; 12 sons &nbsp;&nbsp;¤&nbsp;&nbsp; 34 mins </p>
         </section>
         <section className='bottom-section p-3 pt-4'>
             <button className='shuffle rounded shadow p-2'><i class="fa-solid fa-shuffle"></i>&nbsp;&nbsp; Aléatoire</button>
