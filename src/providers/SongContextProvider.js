@@ -1,7 +1,6 @@
 // Import des dépendances nécessaires depuis React et le contexte des chansons
 import React, { useEffect, useState } from 'react';
 import SongsContext from './SongsContext'; // Contexte global pour les données des chansons
-import sons from '../sons'; // Import des données des chansons
 
 // Définition du composant SongContextProvider
 function SongContextProvider({ children }) {
@@ -12,8 +11,20 @@ function SongContextProvider({ children }) {
 
     // Utilisation de useEffect pour charger les chansons initiales
     useEffect(() => {
-        setSongs(sons);
-    }, [songs]);
+        fetch('http://localhost:3001/songs/')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("Erreur HTTP: " + response.status);
+            }
+            return response.json();
+          })
+          .then(data => {
+            setSongs(data);
+          })
+          .catch(function(error) {
+            console.log('Il y a eu un problème avec l\'opération fetch: ' + error.message);
+          });
+      }, []);
 
     // Fonction pour changer la chanson actuelle
     const changeCurrentSong = (song) => {
