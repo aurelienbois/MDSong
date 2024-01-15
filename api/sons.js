@@ -73,4 +73,4 @@ const sons = [
     }
 ]
 
-export default sons
+module.exports = sons;
