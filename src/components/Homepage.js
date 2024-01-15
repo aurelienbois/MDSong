@@ -39,7 +39,7 @@ function Homepage() {
             </section>
 
             {/* Lecteur audio caché avec la source de la chanson actuelle */}
-            <audio className='d-none' src={process.env.PUBLIC_URL + "/dossiers_chansons/" + currentSong?.song} controls autoPlay />
+            <audio className='d-none' src={"http://localhost:3001/songs/" + currentSong?.song} controls autoPlay />
 
             {/* Affichage du lecteur audio seulement si une chanson est sélectionnée */}
             {Object.keys(currentSong).length !== 0 && <SongPlayer></SongPlayer>}

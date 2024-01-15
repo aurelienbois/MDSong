@@ -39,7 +39,7 @@ function SongPlayer() {
                     // Quand le lecteur est en mode minsize
                     <div className='contain'>
                         {/* Pochette, titre, artiste et bouton de lecture/pause */}
-                        <img className='' alt='music' src={`${process.env.PUBLIC_URL}/dossiers_chansons/${currentSong?.cover}`}></img>
+                        <img className='' alt='music' src={`http://localhost:3001/songs/${currentSong?.cover}`}></img>
                         <div>
                             <h4 className=''>{currentSong.title}</h4>
                             <h6 className=''>{currentSong.artist}</h6>
@@ -69,7 +69,7 @@ function SongPlayer() {
                         {/* Corps du lecteur en mode plein écran avec pochette, boutons de contrôle, etc. */}
                         <div className='body'>
                             <div>
-                                <img className='rounded w-100 mb-4' alt='music' src={`${process.env.PUBLIC_URL}/dossiers_chansons/${currentSong?.cover}`}></img>
+                                <img className='rounded w-100 mb-4' alt='music' src={`http://localhost:3001/songs/${currentSong?.cover}`}></img>
                                 <div className='d-flex justify-content-between align-items-center'>
                                     <div>
                                         <h4 className='fw-bold'>{currentSong.title}</h4>
